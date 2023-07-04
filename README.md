@@ -2,7 +2,7 @@
 A simple python script for killing specific programs. This can be used with Task Scheduler.
 
 ## How To Install
-1. Go to Releases
+1. Go to [Releases](https://github.com/jericjan/process-killer/releases)
 2. Download the .zip and extract it to any location.
 
 ## How To Use
