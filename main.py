@@ -2,6 +2,8 @@ import psutil
 import os
 import logging
 import argparse
+import sys
+from pathlib import Path
 
 parser = argparse.ArgumentParser()
 parser.add_argument('process_names', nargs='+', help='One or more names of processes (with .exe)')
@@ -9,12 +11,13 @@ args = parser.parse_args()
 
 processes = args.process_names
 
+current_dir = Path(sys.executable).parent if hasattr(sys, 'frozen') else Path.cwd()
 
 
 
 logger = logging.getLogger('my_logger')
 logger.setLevel(logging.DEBUG)
-log_file = f'process_killer.log'
+log_file = current_dir / 'process_killer.log'
 file_handler = logging.FileHandler(log_file)
 formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
 file_handler.setFormatter(formatter)
