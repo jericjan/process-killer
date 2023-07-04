@@ -47,3 +47,6 @@ There's already a compiled `.exe` file but ok.
 
 7. You can make changes to the code and compile it with `pyinstaller main.spec`.  
 Make sure your venv is called `.venv` and is in the root folder, as mentioned in step 3.
+
+## Developer's Note
+This seems like a pointless program. `taskkill` is already a built-in tool of Windows. So you could just use that. I was just really mad at NIKKE for using `tbs-browser.exe`. It's so bad. It uses so much CPU and Memory, and I think even GPU? I hated it. So, without even thinking, I wrote a little script in Python that would kill it, completely forgetting that, again, `taskkill` exists!
